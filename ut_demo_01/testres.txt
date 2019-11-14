@@ -1,0 +1,25 @@
+test_add (ut_demo_01.testclass_01.TestAdd) ... FAIL
+test_add_1 (ut_demo_01.testclass_01.TestAdd) ... ok
+test_add (ut_demo_01.testclass_01.TestAdd) ... FAIL
+test_add_1 (ut_demo_01.testclass_01.TestAdd) ... ok
+
+======================================================================
+FAIL: test_add (ut_demo_01.testclass_01.TestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\workspace\autotest\unittest_01\unittest_01\ut_demo_01\testclass_01.py", line 10, in test_add
+    self.assertEqual(1,res)
+AssertionError: 1 != 11
+
+======================================================================
+FAIL: test_add (ut_demo_01.testclass_01.TestAdd)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\workspace\autotest\unittest_01\unittest_01\ut_demo_01\testclass_01.py", line 10, in test_add
+    self.assertEqual(1,res)
+AssertionError: 1 != 11
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.002s
+
+FAILED (failures=2)
