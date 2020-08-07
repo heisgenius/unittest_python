@@ -2,18 +2,14 @@ import unittest
 # 导入测试类
 from ut_demo_01.testclass_01 import TestAdd
 from ut_demo_01 import testclass_01
+from ut_demo_01.readfromexcel import doExcel
 import HTMLTestRunnerNew
 # 加载测试用例
 '''
 suite  中文解释为  测试套件 或者是测试用例的容器
 '''
 suite = unittest.TestSuite()#创建了TestSuite的实例
-testdata=[
-    [1,2,3,'两个正数相加'],
-    [-1,-2,-3,'两个负数相加'],
-    [1,0,1,'两个0相加'],
-    [1,-2,-1,'一正一负相加']
-    ]
+testdata= doExcel().do_excel()
 # 把用例放进测试套件里面去
 """A test suite is a composite test consisting of a number of TestCases.
 
@@ -29,8 +25,8 @@ testdata=[
    """
 # 方法一
 for item in testdata:
-    print('正在执行的测试为{}'.format(item[3]))
-    suite.addTest(TestAdd(item[0],item[1],item[2]))
+    print('正在执行的测试为{}'.format(item['desc']))
+    suite.addTest(TestAdd(item['a'],item['b'],item['expected'],item['desc'],item['caseid']))
 # suite.addTest(TestAdd('test_add_1'))
 
 
