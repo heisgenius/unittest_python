@@ -13,14 +13,14 @@ caseid = eval(readConfig().readconfig('testcase.conf','option','caseid'))
 suite  中文解释为  测试套件 或者是测试用例的容器
 '''
 suite = unittest.TestSuite()#创建了TestSuite的实例
-testdata= doExcel().do_excel(button,caseid)
-# if button == 'on':
-#     final_data  = testdata
-# else:
-#     final_data =[]
-#     for item in testdata:
-#         if item['caseid'] in caseid:
-#             final_data.append(item)
+testdata= doExcel().do_excel()
+if button == 'on':
+    final_data  = testdata
+else:
+    final_data =[]
+    for item in testdata:
+        if item['caseid'] in caseid:
+            final_data.append(item)
 
 # 把用例放进测试套件里面去
 """A test suite is a composite test consisting of a number of TestCases.
